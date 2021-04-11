@@ -1,0 +1,73 @@
+body {
+  height: 100vh;
+}
+
+.container-fluid {
+  padding: 0;
+  height: 100%;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: 15% 1fr 15%;
+  grid-template-rows: repeat(4, 1fr) repeat(7, 3.5rem);
+
+  background-color: #f8f8f8;
+
+  .jokeBox {
+    min-height: max-content;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 2;
+    grid-row-end: 5;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .jokeBox__color {
+    background-color: rgb(255, 255, 0);
+    box-shadow: inset 0 0 36px 1px rgba(255, 252, 70, 0.75);
+    border-radius: 15px;
+  }
+
+  .btn {
+    height: max-content;
+    grid-column-start: 2;
+    grid-column-end: 3;
+
+    grid-row-start: 5;
+    grid-row-end: 6;
+
+    font-size: 2rem;
+    box-shadow: -1px 0 15px 0 rgba(0, 0, 0, 0.75);
+  }
+
+  .footer {
+    grid-column-start: 1;
+    grid-column-end: 4;
+
+    grid-row-start: 11;
+    grid-row-end: 12;
+    background-color: #d51a82;
+  }
+}
+
+.jokeBox {
+  .joke {
+    padding: 0.5rem;
+    text-align: center;
+    font-size: calc(1rem + 1vw);
+  }
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+
+  .footerText {
+    color: whitesmoke;
+    font-weight: bold;
+  }
+}
